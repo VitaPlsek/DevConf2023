@@ -2,7 +2,7 @@
 ## How to enjoy E2E testing in Kotlin / Spring
 
 ### Links
- - [Slides]("doc/Devconf 2023.pdf")
+ - [Slides](doc/Devconf2023.pdf)
 
  - https://kotest.io/
  - https://mockk.io/ / https://github.com/Ninja-Squad/springmockk
