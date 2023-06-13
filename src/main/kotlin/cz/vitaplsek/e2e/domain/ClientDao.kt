@@ -41,4 +41,10 @@ class ClientDao(val dslContext: DSLContext) {
             .set(OFFICE.ACTIVE, false)
             .where(OFFICE.ID.eq(id))
             .execute()
+
+    fun getOfficesByClientId(id: Long): List<OfficeDto> =
+        dslContext
+            .selectFrom(OFFICE)
+            .where(OFFICE.CLIENT_ID.eq(id))
+            .fetchInto(OfficeDto::class.java)
 }
