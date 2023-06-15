@@ -44,6 +44,7 @@ dependencies {
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("org.springframework.boot:spring-boot-starter-webflux")
     testImplementation("io.mockk:mockk:1.12.5")
+    testImplementation("com.ninja-squad:springmockk:4.0.2")
     testImplementation("org.testcontainers:testcontainers:1.17.3")
     testImplementation("org.testcontainers:postgresql:1.17.3")
     testImplementation("org.testcontainers:junit-jupiter:1.17.3")
