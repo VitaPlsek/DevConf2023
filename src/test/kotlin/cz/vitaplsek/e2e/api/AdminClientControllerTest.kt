@@ -1,16 +1,20 @@
 package cz.vitaplsek.e2e.api
 
+import com.ninjasquad.springmockk.MockkBean
 import cz.vitaplsek.e2e.E2EShouldSpec
+import cz.vitaplsek.e2e.api.dto.ClientDto
 import cz.vitaplsek.e2e.api.dto.CreateOfficeDto
 import cz.vitaplsek.e2e.createClient
 import cz.vitaplsek.e2e.createOffice
 import cz.vitaplsek.e2e.deactivateOffice
+import cz.vitaplsek.e2e.domain.ClientDao
 import cz.vitaplsek.e2e.getClient
 import cz.vitaplsek.e2e.getClientRaw
 import cz.vitaplsek.e2e.getOffice
 import cz.vitaplsek.e2e.is4xxClientError
 import io.kotest.matchers.collections.shouldHaveSize
 import io.kotest.matchers.shouldBe
+import io.mockk.every
 import kotlin.random.Random
 
 class AdminClientControllerTest : E2EShouldSpec() {
