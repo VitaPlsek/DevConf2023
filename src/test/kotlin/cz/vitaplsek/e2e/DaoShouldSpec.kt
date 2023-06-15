@@ -16,7 +16,7 @@ import org.springframework.transaction.support.DefaultTransactionDefinition
 
 @SpringBootTest
 @ActiveProfiles("test")
-open class DaoShouldSpec : ShouldSpec() {
+abstract class DaoShouldSpec : ShouldSpec() {
 
     override fun isolationMode(): IsolationMode = IsolationMode.InstancePerLeaf
     override fun extensions() = listOf(SpringExtension)

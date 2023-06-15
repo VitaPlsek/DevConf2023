@@ -9,8 +9,16 @@ import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
-class AdminClientController(val clientDao: ClientDao) {
+class AdminOfficeController(val clientDao: ClientDao) {
 
-    @GetMapping("/client/{id}")
-    fun get(@PathVariable(value = "id") id: Long) = clientDao.get(id)
+    @PostMapping("/client/{id}/office")
+    fun createOffice(
+        @PathVariable(value = "id") id: Long,
+        @RequestBody createOffice: CreateOfficeDto
+    ) = clientDao.createOffice(id, createOffice)
+
+    @PostMapping("/office/{id}/deactivate")
+    fun deactivateOffice(
+        @PathVariable(value = "id") id: Long
+    ) = clientDao.deactivateOffice(id)
 }

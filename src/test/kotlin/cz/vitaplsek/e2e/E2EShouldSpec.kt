@@ -11,7 +11,7 @@ import org.springframework.test.web.reactive.server.WebTestClient
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @ActiveProfiles("test")
-open class E2EShouldSpec : ShouldSpec() {
+abstract class E2EShouldSpec : ShouldSpec() {
 
     override fun isolationMode(): IsolationMode = IsolationMode.InstancePerLeaf
     override fun extensions() = listOf(SpringExtension)
